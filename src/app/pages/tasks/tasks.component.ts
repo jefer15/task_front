@@ -19,6 +19,7 @@ export class TasksComponent implements OnInit {
   selectedFilter: 'all' | 'completed' | 'pending' = 'all';
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+
   constructor(
     private _tasksService: TasksService,
     private _dialog: MatDialog,
@@ -47,9 +48,10 @@ export class TasksComponent implements OnInit {
 
   addTask() {
     const dialogRef = this._dialog.open(NeTaskComponent, {
-      width: "80%",
-      height: "85%",
-      maxWidth: "80%",
+      width: "90%",
+      maxWidth: "90%",
+      height: "auto",
+      panelClass: 'centered-dialog'
     });
     dialogRef.afterClosed().subscribe((data) => {
       this.getData();
@@ -57,9 +59,10 @@ export class TasksComponent implements OnInit {
   }
   editTask(task: Task) {
     const dialogRef = this._dialog.open(NeTaskComponent, {
-      width: "80%",
-      height: "85%",
-      maxWidth: "80%",
+      width: "90%",
+      maxWidth: "90%",
+      height: "auto",
+      panelClass: 'centered-dialog',
       data: task
     });
     dialogRef.afterClosed().subscribe((data) => {

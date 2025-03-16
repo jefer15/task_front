@@ -29,7 +29,7 @@ export class NeTaskComponent implements OnInit {
   constructorForm() {
     this.taskForm = this.fb.group({
       title: [this.data ? this.data.title : '', [Validators.required, Validators.minLength(5)]],
-      description: [this.data ? this.data.description : ''],
+      description: [this.data ? this.data.description : '', [Validators.required, Validators.minLength(5)]],
       isCompleted: [this.data ? this.data.isCompleted : false]
     })
   }
@@ -70,10 +70,10 @@ export class NeTaskComponent implements OnInit {
             });
           },
           error: (err: any) => {
-            if (err.error.code === 3) {
+            if (err.status === 409) {
               Swal.fire({
                 title: "Tarea",
-                text: "No se puedo actualizar la tarea porque el nombre ya existe",
+                text: "No se puedo actualizar la tarea porque el titulo ya existe",
                 icon: 'info',
                 confirmButtonText: 'Ok',
                 showConfirmButton: true,
@@ -99,10 +99,10 @@ export class NeTaskComponent implements OnInit {
             });
           },
           error: (err: any) => {
-            if (err.error.code === 3) {
+            if (err.status === 409) {
               Swal.fire({
                 title: "Tarea",
-                text: "No se puedo crear la tarea porque el nombre ya existe",
+                text: "No se puedo crear la tarea porque el titulo ya existe",
                 icon: 'info',
                 confirmButtonText: 'Ok',
                 showConfirmButton: true,
