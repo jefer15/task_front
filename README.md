@@ -1,27 +1,56 @@
-# TaskFront
+# Task Management App (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+This is the frontend for the Task Management application built with Angular. The application allows users to manage tasks efficiently by performing CRUD operations.
 
-## Development server
+## Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Before running the project, ensure you have the following installed:
 
-## Code scaffolding
+- **Node.js** (v18.x or later)
+- **Angular CLI** (v15.1.2)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Getting Started
 
-## Build
+Follow these steps to set up the project locally:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1. Clone the Repository
+```sh
+git clone -b develop https://github.com/jefer15/task-front.git
+cd task-front
+```
 
-## Running unit tests
+### 2. Install Dependencies
+```sh
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Start the Development Server
+```sh
+npm start
+```
+This will run the app on `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Build the Project
+To generate a production build, run:
+```sh
+npm run build
+```
+The build files will be generated in the `dist/` folder.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Branching Strategy
+The main development happens on the `develop` branch. Please ensure to create feature branches from `develop` before making changes.
 
-## Further help
+## Additional Scripts
+- `npm run test` - Runs unit tests
+- `npm run watch` - Watches for file changes and rebuilds automatically
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies Used
+- Angular 15
+- Angular Material
+- RxJS
+- SweetAlert2
+- TailwindCSS
+
+## License
+This project is licensed under the MIT License.
+
