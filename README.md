@@ -15,7 +15,7 @@ Follow these steps to set up the project locally:
 
 ### 1. Clone the Repository
 ```sh
-git clone -b develop https://github.com/jefer15/task-front.git
+git clone -b develop https://github.com/jefer15/task_front.git
 cd task-front
 ```
 
